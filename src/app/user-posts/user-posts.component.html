@@ -1,0 +1,32 @@
+<div class="overflow-auto" style="max-height: 400px;">
+    <ng-container *ngIf="posts">
+        <ng-container *ngFor="let post of posts; let i = index">
+            <div class="card-body">
+                <h4 class="card-title">{{ post.title }}</h4>
+                <p class="card-text">{{ post.body }}</p>
+                <br>
+                <p class="card-text">Tags: {{ post.tags }}</p>
+
+                <div class="footer-card">
+                    <p class="card-text">Likes: {{ post.reactions.likes }}</p>
+                    <p class="card-text">Dislikes: {{ post.reactions.dislikes }}</p>
+                    <p class="card-text">Vistas: {{ post.views }}</p>
+                    <button class="btn btn-primary" (click)="loadComments()">Comentarios</button>
+                </div>
+
+                <!-- Comentarios para cada post -->
+                <ng-container *ngIf="verComentarios">
+                    <ng-container *ngFor="let comentario of cp[i]">
+                        <div class="card-comment">
+                            <p class="card-text">{{ comentario.body }}</p>
+                            <div class="footer-card">
+                                <p class="card-text">Likes: {{ comentario.likes }}</p>
+                                <p class="card-text">Usuario: {{ comentario.user.username }}</p>
+                            </div>
+                        </div>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </ng-container>
+    </ng-container>
+</div>

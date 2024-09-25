@@ -1,0 +1,23 @@
+<article class="card-user">
+    <ng-container *ngIf="!user">
+        <h1>Perfil de usuario</h1>
+        <img src="/images/account-not-found-removebg-preview.png" alt="User not found" width="160px">
+        <h5>Usuario no encontrado</h5>
+    </ng-container>
+
+    <!-- Card de usuario -->
+    <ng-container *ngIf="user">
+        <h1 class="card-title">{{ user.firstName }} {{ user.lastName }}</h1>
+        <img [src]="user.image" alt="" class="user-img">
+
+        <div class="card-body">
+            <p class="card-text">Usuario: {{ user.username }}</p>
+            <p class="card-text">Edad: {{ user.age }}</p>
+            <p class="card-text">Genero: {{ user.gender }}</p>
+            <p class="card-text">Correo: {{ user.email }}</p>
+            <p class="card-text">Teléfono: {{ user.phone }}</p>
+            <p class="card-text">Fecha de Nacimiento: {{ user.birthDate }}</p>
+            <p class="card-text">Universidad: {{ user.university }}</p>
+        </div>
+    </ng-container>
+</article>

@@ -1,0 +1,127 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+nav {
+    width: 100%;
+    height: 14vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: skyblue;
+    box-shadow: rgba(121, 157, 158, 0.445) 0px 0px 10px;
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.navbar-brand h2 {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar-text {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.form-inline {
+    width: 35%;
+    height: 50%;
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.192);
+}
+
+.btn-outline {
+    height: 100%;
+    width: 12%;
+    font-size: 20px;
+    color: black;
+}   
+
+.btn-outline:hover,
+.btn-outline:focus {
+    background-color: rgba(128, 128, 128, 0.192);
+    border-radius: 10px;
+}
+
+.form-control {
+    height: 80%;
+    font-size: 20px;
+    color: black;
+    margin: 0px 5px 0px 0px;
+}
+/* Cuando el input tiene texto */
+.form-control:not(:placeholder-shown) {
+    font-size: 20px;
+    border-radius: 10px;
+    color: black;
+}
+.form-control:focus,
+.form-control:hover {
+    font-size: 20px;
+    font-size: 20px;
+}
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 86vh;
+}
+
+.container-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: 80%;
+}
+
+app-user-profile {
+    width: 33%;
+}
+
+.box-posts {
+    border-radius: 25px;
+    background-color: rgba(185, 185, 185, 0.445);
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+app-user-posts {
+    width: 100%;
+}
+
+.alert {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font-size: 27px;
+}
