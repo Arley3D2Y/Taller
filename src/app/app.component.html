@@ -18,7 +18,7 @@
   <section class="container-profile">
     <app-user-profile [user]="user"></app-user-profile>
 
-    <article class="box-posts">
+    <article class="box-posts shadow p-3 mb-5 bg-body-tertiary rounded">
       <h1 class="card-title">Publicaciones</h1>
   
       <app-user-posts *ngIf="posts.length > 0" [posts]="posts" [cp]="cp" ></app-user-posts>

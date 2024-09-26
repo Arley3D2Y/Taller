@@ -53,7 +53,7 @@ nav {
     width: 12%;
     font-size: 20px;
     color: black;
-}   
+}
 
 .btn-outline:hover,
 .btn-outline:focus {
@@ -67,12 +67,14 @@ nav {
     color: black;
     margin: 0px 5px 0px 0px;
 }
+
 /* Cuando el input tiene texto */
 .form-control:not(:placeholder-shown) {
     font-size: 20px;
     border-radius: 10px;
     color: black;
 }
+
 .form-control:focus,
 .form-control:hover {
     font-size: 20px;
@@ -105,7 +107,8 @@ app-user-profile {
 
 .box-posts {
     border-radius: 25px;
-    background-color: rgba(185, 185, 185, 0.445);
+    background-color: rgba(185, 185, 185, 0.199);
+
     width: 62%;
     display: flex;
     flex-direction: column;

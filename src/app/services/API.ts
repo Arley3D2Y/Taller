@@ -42,7 +42,7 @@ export class ApiService {
 
   // Este método debe devolver un array de CommentPost[]
   getCommentsByPostId(postId: number): Observable<CommentPost[]> {
-    // Cambia esta línea
+  
     return this.http.get<any>(`${this.baseUrl}/comments/post/${postId}`)
       .pipe(
         map(response => {

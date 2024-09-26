@@ -1,4 +1,4 @@
-<article class="card-user">
+<article class="card-user shadow p-3 mb-5 bg-body-tertiary rounded" >
     <ng-container *ngIf="!user">
         <h1>Perfil de usuario</h1>
         <img src="/images/account-not-found-removebg-preview.png" alt="User not found" width="160px">
@@ -10,14 +10,28 @@
         <h1 class="card-title">{{ user.firstName }} {{ user.lastName }}</h1>
         <img [src]="user.image" alt="" class="user-img">
 
-        <div class="card-body">
-            <p class="card-text">Usuario: {{ user.username }}</p>
-            <p class="card-text">Edad: {{ user.age }}</p>
-            <p class="card-text">Genero: {{ user.gender }}</p>
-            <p class="card-text">Correo: {{ user.email }}</p>
-            <p class="card-text">Teléfono: {{ user.phone }}</p>
-            <p class="card-text">Fecha de Nacimiento: {{ user.birthDate }}</p>
-            <p class="card-text">Universidad: {{ user.university }}</p>
+        <div class="card-body ">
+            <p class="card-text left-aligned-content"><i class="bi bi-person-fill"></i><strong> Usuario: </strong>
+                <span>{{ user.username }}</span>
+            </p>
+            <p class="card-text left-aligned-content"><i class="bi bi-clock-fill"></i><strong> Edad: </strong> <span>{{
+                    user.age }}</span></p>
+            <p class="card-text left-aligned-content"> <i class="bi bi-gender-ambiguous"></i>
+                <strong> Genero: </strong>
+                <span>{{ user.gender }}</span>
+            </p>
+            <p class="card-text left-aligned-content"><i class="bi bi-envelope-at-fill"></i><strong> Correo: </strong>
+                <span>{{ user.email }}</span>
+            </p>
+            <p class="card-text  left-aligned-content"><i class="bi bi-telephone-fill"></i> <strong> Teléfono
+                    :</strong> <span>{{ user.phone }}</span></p>
+            <p class="card-text  left-aligned-content"><i class="bi bi-calendar-heart-fill"></i> <strong> Fecha de
+                    Nacimiento:
+                </strong> <span>{{ user.birthDate }}</span></p>
+            <p class="card-text left-aligned-content"><i class="bi bi-book-fill"></i><strong> Universidad: </strong>:
+                <span>{{
+                    user.university }}</span>
+            </p>
         </div>
     </ng-container>
 </article>

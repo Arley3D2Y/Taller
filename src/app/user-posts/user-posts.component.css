@@ -37,6 +37,23 @@
     background-color: rgb(255, 255, 255);
 }
 
+
+.bi{
+    color: #2d2faa;
+    font-size: 25px;
+}
+
+.bi-chat-square-text-fill{
+    font-size: 30px;
+}
+
+.bi-chat-square-text-fill:hover{
+    transition:all 0.5s ease;
+    font-size: 32px;
+}
+
+
+
 h1 {
     font-size: 27px;
 }
@@ -44,4 +61,7 @@ h1 {
 p {
     font-size: 18px;
     margin: 0px;
+}
+span{
+    color: #2d2faa;
 }

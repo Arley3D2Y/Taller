@@ -5,13 +5,15 @@
                 <h4 class="card-title">{{ post.title }}</h4>
                 <p class="card-text">{{ post.body }}</p>
                 <br>
-                <p class="card-text">Tags: {{ post.tags }}</p>
+                <p class="card-text"> <i class="bi bi-tag-fill"></i> {{ post.tags }}</p>
 
                 <div class="footer-card">
-                    <p class="card-text">Likes: {{ post.reactions.likes }}</p>
-                    <p class="card-text">Dislikes: {{ post.reactions.dislikes }}</p>
-                    <p class="card-text">Vistas: {{ post.views }}</p>
-                    <button class="btn btn-primary" (click)="loadComments()">Comentarios</button>
+
+                    <p class="card-text"> <i class="bi bi-hand-thumbs-up-fill"></i> {{ post.reactions.likes }}</p>
+                    <p class="card-text"> <i class="bi bi-hand-thumbs-down-fill"></i>{{ post.reactions.dislikes }}
+                    </p>
+                    <p class="card-text"><i class="bi bi-eye-fill"></i>{{ post.views }}</p>
+                    <i class="bi bi-chat-square-text-fill" (click)="loadComments()"></i>
                 </div>
 
                 <!-- Comentarios para cada post -->
@@ -20,8 +22,10 @@
                         <div class="card-comment">
                             <p class="card-text">{{ comentario.body }}</p>
                             <div class="footer-card">
-                                <p class="card-text">Likes: {{ comentario.likes }}</p>
-                                <p class="card-text">Usuario: {{ comentario.user.username }}</p>
+                                <p class="card-text"><i class="bi bi-hand-thumbs-up" aria-label="Likes"></i> {{
+                                    post.reactions.likes }}{{ comentario.likes }}</p>
+                                <p class="card-text"><i class="bi bi-person-fill"></i> <span>{{ comentario.user.username}}</span>
+                                </p>
                             </div>
                         </div>
                     </ng-container>
